@@ -1,0 +1,16 @@
+<channel
+   name="Load and Save a File"
+   guid="2CA8A242551A9CE3EC06814BC6327FBB"
+   description="A very simple example of Lua code to save or load a file."
+   start_automatically="true"
+   logging_level="1"
+   use_message_filter="false">
+   <to_channel>
+   </to_channel>
+   <from_mapper
+      guid="Load_and_Save_a_File-From-c2JGgwmm2vV071"
+      commit_id="c582801185bc51bf40c2a53965d896f3ffc1633a"
+      commit_comment="First commit of this example file."
+      poll_time="10000">
+   </from_mapper>
+</channel>
