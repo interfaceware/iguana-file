@@ -24,8 +24,6 @@ local function SaveFile(FileName, Content)
    F:close()
 end
 
-local Padding = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
-
 function config.load(T)
    local Config = T.config
    local Key = T.key
@@ -39,7 +37,15 @@ function config.load(T)
    local Password = X.config.password:S()
    Password = filter.base64.dec(Password)
    Password = filter.aes.dec{data=Password, key=TotalKey}
-   return Password:sub(1, #Password - #Padding)
+   -- If we have a short password need to get rid
+   -- of \0 padding.
+   for i=#Password, 1, -1 do
+      if Password:byte(i) ~= 0 then
+         Password = Password:sub(1, i)
+         break
+      end
+   end
+   return Password
 end
 
 local Comment=[[
@@ -59,7 +65,7 @@ function config.save(T)
    local Salt = util.guid(128)
    X.config.salt = Salt
    local TotalKey = (Salt..Key..Key..Key):sub(1,32)
-   Password = Password..Padding
+   Password = Password
    local EncryptedPassword = filter.aes.enc{data=Password, key=TotalKey}
    EncryptedPassword = filter.base64.enc(EncryptedPassword)
    X.config.password = EncryptedPassword
