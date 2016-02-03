@@ -7,8 +7,8 @@
    use_message_filter="false">
    <to_mapper
       guid="Encrypt_Password_in_File-To-fhpR5hvUCEnhuz"
-      commit_id="27550d64ba39bb196ed14394bd9b7f292ce7c18b"
-      commit_comment="Added help and more comments.">
+      commit_id="53964bd1e1876a7527b13bd59aef7f65a7833377"
+      commit_comment="Fixed problem with short passwords.">
    </to_mapper>
    <from_channel/>
 </channel>
