@@ -1,0 +1,16 @@
+<channel
+   name="Run program on POSIX"
+   guid="F2914D6469905C5453BBEA80D2969841"
+   description="This example shows how you can invoke command line programs from Lua and capture their output.&#xD;&#xA;&#xD;&#xA;This is really useful for invoking all sorts of useful external utilities.&#xD;&#xA;&#xD;&#xA;POSIX covers operating systems like Linux, OS X and Unix.  i.e. everything but Windows."
+   start_automatically="false"
+   logging_level="1"
+   use_message_filter="false">
+   <to_channel>
+   </to_channel>
+   <from_mapper
+      guid="Running_a_binary_on_POSIX-From-QiCKK5aVSnamBy"
+      commit_id="72c455c09fcbf169efc31f469c323c37a70b2cbb"
+      commit_comment="Compressed the code."
+      poll_time="10000">
+   </from_mapper>
+</channel>
