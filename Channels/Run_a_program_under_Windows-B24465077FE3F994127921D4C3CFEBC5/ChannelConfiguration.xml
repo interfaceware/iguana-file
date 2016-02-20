@@ -1,0 +1,16 @@
+<channel
+   name="Run a program under Windows"
+   guid="B24465077FE3F994127921D4C3CFEBC5"
+   description="This shows how one can run a windows program from the translator and capture the output from it.&#xD;&#xA;&#xD;&#xA;The windows file system introduces a few wrinkles into the mix which is why we have this separate example from what we do on other operating systems."
+   start_automatically="true"
+   logging_level="1"
+   use_message_filter="false">
+   <to_channel>
+   </to_channel>
+   <from_mapper
+      guid="Run_a_program_under_Windows-From-HhmIDT7hj3HD0b"
+      commit_id="08cdeeffe7549aaa226b4e7a3a4923c69df7d53a"
+      commit_comment="First commit."
+      poll_time="10000">
+   </from_mapper>
+</channel>
