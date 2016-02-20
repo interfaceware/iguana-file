@@ -1,7 +1,7 @@
 <channel
    name="Run a program under Windows"
    guid="B24465077FE3F994127921D4C3CFEBC5"
-   description="This shows how one can run a windows program from the translator and capture the output from it.&#xD;&#xA;&#xD;&#xA;The windows file system introduces a few wrinkles into the mix which is why we have this separate example from what we do on other operating systems."
+   description="This example shows how you can invoke command line programs from Lua and capture their output. &#xD;&#xA;&#xD;&#xA;This is really useful for invoking all sorts of useful external utilities. This example is for windows which is slightly different from what is seen under other operating systems like Linux, Unix and OS X.&#xD;&#xA;"
    start_automatically="true"
    logging_level="1"
    use_message_filter="false">
