@@ -2,13 +2,13 @@
    name="Encrypt Password in File"
    guid="61624EC7E41EBDB888217A37F235988F"
    description="This example has a module that enables you to store an encrypted password in an external file.&#xD;&#xA;&#xD;&#xA;This can be useful if you want to make it easy to share source code for a channel in say a GIT repository but you do not want to have the password to appear within that repository."
-   start_automatically="true"
+   start_automatically="false"
    logging_level="1"
    use_message_filter="false">
    <to_mapper
       guid="Encrypt_Password_in_File-To-fhpR5hvUCEnhuz"
-      commit_id="53964bd1e1876a7527b13bd59aef7f65a7833377"
-      commit_comment="Fixed problem with short passwords.">
+      commit_id="e045fec31d9779cc675c1cc2b4298d5ac7825510"
+      commit_comment="Import Translators: file examples">
    </to_mapper>
    <from_channel/>
 </channel>
