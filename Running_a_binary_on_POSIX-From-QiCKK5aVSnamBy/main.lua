@@ -2,35 +2,41 @@
 -- POSIX style operating systems like OS X, Linux and Unix
 
 function main()
-   local cmd = [[ls -lh | grep iguana]]
+   local Command = [[ls -lh | grep iguana]]
    -- When executing a binary with 
    -- os.execute we won't see the output
    -- that the binary generates, but we
    -- can see the exit status of the command.
-   local success, message = execute(cmd)
-   trace(success, message)
+   local Success, Message = execute(Command)
+   trace(Success, Message)
    
    -- If we want to see the output a 
    -- executable generates we can use
    -- io.popen instead.
-   local out = executeWithOutput(cmd)
-   trace(out)
+   local Out = executeWithOutput(Command)
+   trace(Out)
+   
+   -- To get standard error as well
+   -- as standard out redirect the output
+   -- with the bit 2>&1 which means redirect
+   -- stream 2 (error) to stream 1 (standard)
+   Out = executeWithOutput('ls -Z 2>&1')
 end
 
-function execute(cmd)
+function execute(Command)
    -- It's useful to build up a list of messages for known return codes
    -- so that problems are easier to debug. This doesn't need to be done.
    local exitCodes = {
-      [0]     = "Ran successfully: \r\n"..cmd,
-      [1]     = "Ran with error(s): \r\n"..cmd,
-      [126]   = "Not executable or we don't have permission to execute it: \r\n"..cmd,
-      [127]   = "Command can not be found: \r\n"..cmd,
-      [256]   = "Command ran with error(s): \r\n"..cmd,
-      [32256] = "Command is not executable or we don't have permission to execute it: \r\n"..cmd,
-      [32512] = "Command can not be found: \r\n"..cmd,
+      [0]     = "Ran successfully: \r\n"..Command,
+      [1]     = "Ran with error(s): \r\n"..Command,
+      [126]   = "Not executable or we don't have permission to execute it: \r\n"..Command,
+      [127]   = "Command can not be found: \r\n"..Command,
+      [256]   = "Command ran with error(s): \r\n"..Command,
+      [32256] = "Command is not executable or we don't have permission to execute it: \r\n"..Command,
+      [32512] = "Command can not be found: \r\n"..Command,
       [99999] = "etc."
    }
-   local exitCode = os.execute(cmd)
+   local exitCode = os.execute(Command)
    
    if exitCode ~= 0 then
       -- If the exit status isn't 0 this should indicate the execution
@@ -43,8 +49,8 @@ function execute(cmd)
    end
 end
 
-function executeWithOutput(cmd)
-   local P = io.popen(cmd,'r') -- First we open the command
+function executeWithOutput(Command)
+   local P = io.popen(Command,'r') -- First we open the command
    local Output = P:read('*a') -- and then we read the output
    P:close()
    return Output
