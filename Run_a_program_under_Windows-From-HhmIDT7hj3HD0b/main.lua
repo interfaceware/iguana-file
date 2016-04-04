@@ -5,9 +5,12 @@
 -- "D:\ && cd D:\\Some Directory\\XYX\\ && MyCommand"
 -- It can be very perplexing the first time you run into this.
 
+-- Note that rather than using dir os.fs.glob is a better choice for reading
+-- files from a directory. See:
+-- http://help.interfaceware.com/api/#os_fs_glob
+
 function main()
    local Command = [[C: && cd C:\\Windows && dir]]
-
    -- When executing a binary with os.execute we won't see the output that
    -- the binary generates, but we can see the exit status of the command.
    local Success, Message = Execute(Command)
@@ -17,6 +20,12 @@ function main()
    -- io.popen instead.
    local Out = ExecuteWithOutput(Command)
    trace(Out)
+   -- To get standard error as well
+   -- as standard out redirect the output
+   -- with the bit 2>&1 which means redirect
+   -- stream 2 (error) to stream 1 (standard)
+   -- The next command has a deliberate error.
+   Out = ExecuteWithOutput('dir /Z 2>&1')
 end
 
 function Execute(cmd)
