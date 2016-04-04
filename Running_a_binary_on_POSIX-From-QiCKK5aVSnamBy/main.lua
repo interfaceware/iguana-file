@@ -1,6 +1,10 @@
 -- This example shows running command line programs on
 -- POSIX style operating systems like OS X, Linux and Unix
 
+-- Note that rather than using invoking ls, os.fs.glob is a better choice for reading
+-- files from a directory within Lua translator code. See:
+-- http://help.interfaceware.com/api/#os_fs_glob
+
 function main()
    local Command = [[ls -lh | grep iguana]]
    -- When executing a binary with 
