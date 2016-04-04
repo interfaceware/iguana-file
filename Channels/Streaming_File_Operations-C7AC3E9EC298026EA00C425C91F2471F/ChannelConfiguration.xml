@@ -1,7 +1,7 @@
 <channel
    name="Streaming File Operations"
    guid="C7AC3E9EC298026EA00C425C91F2471F"
-   description="This channel shows some short examples of using file APIs in Lua which allow files to be read or written too in small chunks.&#xD;&#xA;&#xD;&#xA;This can be useful if you are processing large batches of data.&#xD;&#xA;&#xD;&#xA;Rather than reading everything into memory at once you can read smaller sections at time. This can dramatically improve the performance of some interfaces."
+   description="This channel shows some short examples of using file APIs in Lua which allow files to be read or written to in small chunks.&#xD;&#xA;&#xD;&#xA;This can be useful if you are processing large batches of data.&#xD;&#xA;&#xD;&#xA;Rather than reading everything into memory at once you can read smaller sections at time. This can dramatically improve the performance of some interfaces."
    start_automatically="true"
    logging_level="1"
    use_message_filter="false">
