@@ -1,7 +1,7 @@
 <channel
    name="Convert RTF to text"
    guid="3A3A7E99684B156A2267FE6DA9F58F4D"
-   description="Shows use of module to strip out rich text formatting (RTF) and convert the document to text.&#xD;&#xA;&#xD;&#xA;http://help.interfaceware.com/code/details/rtf-lua"
+   description="Shows use of module to strip out rich text formatting (RTF) and convert the document to text.&#xD;&#xA;&#xD;&#xA;http://help.interfaceware.com/v6/rtf-conversion-example"
    start_automatically="false"
    logging_level="1"
    use_message_filter="false">
@@ -9,8 +9,8 @@
    </to_channel>
    <from_mapper
       guid="Convert_RTF_to_text-From-2Tb9hFViyhk6zt"
-      commit_id="f6ac029fa64bcde3e8bad459f9f372ca80dac9fb"
-      commit_comment="Import Translators: Got file channels."
+      commit_id="3befed1dd2bf207933261e0bf99f12d50bd37a15"
+      commit_comment="Spacing removed."
       poll_time="10000">
    </from_mapper>
 </channel>

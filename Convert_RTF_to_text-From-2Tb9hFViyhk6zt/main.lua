@@ -1,10 +1,11 @@
-local rtf = require 'rtf'
 -- Simple module to convert RTF file into text.
--- http://help.interfaceware.com/code/details/rtf-lua
+-- http://help.interfaceware.com/v6/rtf-conversion-example
+
+local rtf = require 'rtf'
 
 function main()
    -- Read the sample.rtf file which is part of this translator into Content string var
-   local FileName = iguana.project.root() ..'/'..iguana.project.guid()..'/sample.rtf'
+   local FileName = iguana.project.root()..'/'..iguana.project.guid()..'/sample.rtf'
    local F = io.open(FileName,'r')
    local Content = F:read('*a')
    F:close()
