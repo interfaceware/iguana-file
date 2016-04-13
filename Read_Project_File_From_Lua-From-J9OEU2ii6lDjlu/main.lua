@@ -1,9 +1,9 @@
--- The main function is the first function called from Iguana.
--- This example shows how one can load files that are in a project file
+-- This example shows how to load files that are in a project
 -- for a translator instance.
--- The trick is just to understand the layout of the file system and then use
--- standard Lua file apis to load the files in question
+-- The technique is simply to understand the layout of the file system
+-- and use standard Lua file APIs to load the files in question
 
+-- http://help.interfaceware.com/v6/read-project-file-from-lua
 
 function loadFile(FileName)
    local F = io.open(FileName, "r")
@@ -17,15 +17,20 @@ function main()
    local FilePath = iguana.project.root()..iguana.project.guid()..'/'
    -- Here's the file path
    trace(FilePath)
-   -- Let's load it
+
+   -- Let's load the 'local.xml' file
    local LocalXml = loadFile(FilePath..'local.xml')
    -- For fun let's parse the xml
    X = xml.parse{data=LocalXml}
+
    -- Getting to the 'other' directory is also easy 
+   -- Let's load the 'example.xml' file from the 'other' directory
    local OtherXml = loadFile(iguana.project.root()..'other/example.xml')
    X = xml.parse{data=OtherXml}
    trace(X)
-   -- You can of course load Lua files as well...
+
+   -- You can of course load any file in the same way
+   -- for example a Lua file
    local MainFile = loadFile(FilePath..'main.lua')
    trace(MainFile)
    
