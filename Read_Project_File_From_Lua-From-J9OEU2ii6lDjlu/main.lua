@@ -21,7 +21,7 @@ function main()
    -- Let's load the 'local.xml' file
    local LocalXml = loadFile(FilePath..'local.xml')
    -- For fun let's parse the xml
-   X = xml.parse{data=LocalXml}
+   local X = xml.parse{data=LocalXml}
 
    -- Getting to the 'other' directory is also easy 
    -- Let's load the 'example.xml' file from the 'other' directory
