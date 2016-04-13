@@ -1,7 +1,7 @@
 <channel
    name="Load and Save a File"
    guid="2CA8A242551A9CE3EC06814BC6327FBB"
-   description="A very simple example of Lua code to save or load a file."
+   description="A very simple example of Lua code to save or load a file.&#xD;&#xA;&#xD;&#xA;http://help.interfaceware.com/v6/load-and-save-a-file"
    start_automatically="true"
    logging_level="1"
    use_message_filter="false">
@@ -9,8 +9,17 @@
    </to_channel>
    <from_mapper
       guid="Load_and_Save_a_File-From-c2JGgwmm2vV071"
-      commit_id="c582801185bc51bf40c2a53965d896f3ffc1633a"
-      commit_comment="First commit of this example file."
+      commit_id="0e63e58880caf3d3f07731205b5a8e9c6dce826b"
+      commit_comment="Put in documentation link."
       poll_time="10000">
    </from_mapper>
+   <message_filter
+      filter_after_logging="false"
+      log_pre_post_filter_message="true"
+      filter_vmd_path=""
+      transformation_mode="0"
+      scripted_transformation_configuration_name="default"
+      error_handling="0"
+      use_translator_filter="true">
+   </message_filter>
 </channel>
