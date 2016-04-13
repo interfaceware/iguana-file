@@ -1,6 +1,7 @@
 -- This example shows parsing of a CSV file.
+-- See http://help.interfaceware.com/v6/csv-parser
+
 local csv = require 'csv'
--- CSV parsing - See http://help.interfaceware.com/kb/parsing-csv-files
 
 function main(Data)
    local Csv = csv.parseCsv(Data)       -- comma separated (default)

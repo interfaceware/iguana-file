@@ -1,18 +1,18 @@
 <channel
    name="Parse a CSV file"
    guid="602D1F3DA1D9FA83B5C5403E72C0EEA9"
-   description="Example showing processing of a CSV file.&#xD;&#xA;&#xD;&#xA;http://help.interfaceware.com/code/details/csv_parse-lua"
+   description="Example showing processing of a CSV file.&#xD;&#xA;&#xD;&#xA;http://help.interfaceware.com/v6/csv-parser"
    start_automatically="false"
    logging_level="1"
    use_message_filter="false">
    <to_mapper
       guid="Parse_a_CSV_file-To-fKUQ9P8kTIFApj"
-      commit_id="f6ac029fa64bcde3e8bad459f9f372ca80dac9fb"
-      commit_comment="Import Translators: Got file channels.">
+      commit_id="ec15c1721f4af9ff7c8e1e4f01f264ab0e18da62"
+      commit_comment="Updated link.">
       <dequeue_list>
          <dequeue
-            source_guid="00000000000000000000000000000000"
-            dequeue_guid="64284AA998C9C7303FC77B1AD9D735A3"/>
+            source_name="self"
+            dequeue_guid="FA2C2D637F3850E70FA83D3E14644EE6"/>
       </dequeue_list>
    </to_mapper>
    <from_llp_listener
