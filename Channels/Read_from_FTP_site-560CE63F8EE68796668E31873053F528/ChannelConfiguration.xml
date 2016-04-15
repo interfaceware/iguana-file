@@ -1,0 +1,25 @@
+<channel
+   name="Read from FTP site"
+   guid="560CE63F8EE68796668E31873053F528"
+   description="This channel shows how one can have a script which uses secure FTP to poll for text files off a server.&#xD;&#xA;&#xD;&#xA;See http://help.interfaceware.com/v6/read-from-ftp-site ‎&#xD;&#xA;&#xD;&#xA;It&apos;s a good starting point to vary the approach with the security and whether or not to delete the files on the server after processing them and so on. The translator gives greater power and control than using the built in From File/FTP component."
+   start_automatically="false"
+   logging_level="1"
+   use_message_filter="false">
+   <to_channel>
+   </to_channel>
+   <from_mapper
+      guid="From_FTP-From-gNtoE7W8QNchyC"
+      commit_id="cf29ab5efb25b3f8df577dc35adde5c988f9656d"
+      commit_comment="More comments."
+      poll_time="30000">
+   </from_mapper>
+   <message_filter
+      filter_after_logging="false"
+      log_pre_post_filter_message="true"
+      filter_vmd_path=""
+      transformation_mode="0"
+      scripted_transformation_configuration_name="default"
+      error_handling="0"
+      use_translator_filter="true">
+   </message_filter>
+</channel>
