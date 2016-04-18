@@ -9,8 +9,8 @@
    </to_channel>
    <from_mapper
       guid="From_FTP-From-gNtoE7W8QNchyC"
-      commit_id="cf29ab5efb25b3f8df577dc35adde5c988f9656d"
-      commit_comment="More comments."
+      commit_id="666959b5ba16525a2596534fec5f0d4e26892b81"
+      commit_comment="Put in more comments and using &quot;.&quot; as the remote path."
       poll_time="30000">
    </from_mapper>
    <message_filter
