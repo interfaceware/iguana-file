@@ -1,6 +1,9 @@
+-- See http://help.interfaceware.com/v6/encrypt-password-in-file
 -- This module is a helpful utility if your script needs to use
 -- a password that you don't want to appear in the lua code that
 -- is saved in a repository.
+
+-- The code uses AES encryption https://en.wikipedia.org/wiki/Advanced_Encryption_Standard
 
 local config = {}
 
@@ -111,6 +114,5 @@ local Password = config.load{config='acmeapp', key='skKddd223kdS'}"
 }]]
 
 help.set{input_function=config.save, help_data=json.parse{data=SaveHelp}}
-
 
 return config
