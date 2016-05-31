@@ -7,8 +7,8 @@
    use_message_filter="false">
    <to_mapper
       guid="Encrypt_Password_in_File-To-fhpR5hvUCEnhuz"
-      commit_id="18df1f2e1a1b130761fc8bc51af1f9c2f999b89c"
-      commit_comment="Added documentation links.  Turning off auto-start for the channel.">
+      commit_id="e4595fb974af4690bf1a8ef43dd995e509ca0b3d"
+      commit_comment="Import Translators: encrypt password">
    </to_mapper>
    <from_channel/>
 </channel>
