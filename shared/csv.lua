@@ -1,5 +1,6 @@
 -- CSV Module
--- http://help.interfaceware.com/kb/parsing-csv-files
+
+-- http://help.interfaceware.com/v6/csv-parser
 
 local function parseCsvLine (line,sep) 
    local res = {}
@@ -79,9 +80,7 @@ end
 ------------------------------------
 ---- Module Interface functions ----
 ------------------------------------
-local csv = {}
-
-function csv.parseCsv(Data, Separator)
+local function parseCsv(Data, Separator)
    -- handle '\r\n\' as line separator
    Data = Data:gsub('\r\n','\n')
    -- handle '\r' (bad form) as line separator  
@@ -96,4 +95,41 @@ function csv.parseCsv(Data, Separator)
    return Result
 end
 
-return csv
+local Help = {
+   Title="parseCsv",
+   Usage="parseCsv(data, separator)",
+   ParameterTable=false,
+   Parameters={
+      {data={Desc="CSV formatted string to parse <u>string</u>."}},
+      {separator={Desc="Separator used in the CSV string <u>string</u>."}},
+   },
+   Returns={
+      {Desc=[["CSV style" table <u>table</u>.]]}
+   },
+   Examples={[[-- parse comma separated data (default)
+local Csv = parseCsv(Data)
+]],
+      [[-- parse tab separated data
+local Csv = parseCsv(Data, '\t')
+]], 
+      [[-- parse bar separated data
+local Csv = parseCsv(Data, '|')
+]],},
+   Desc=[[Convert a string in CSV format into a "CSV style" table. If the CSV string 
+contains field names in the header row, these will be placed in the first row of the 
+table. If there is no CSV header row then the returned table will only contain data.]],
+   SeeAlso={
+      {
+         Title="Parse a CSV file",
+         Link="http://help.interfaceware.com/v6/csv-parser"
+      },
+      {
+         Title="Source code for the csv.lua module on github",
+         Link="https://github.com/interfaceware/iguana-file/blob/master/shared/csv.lua"
+      }
+   },
+}
+
+help.set{input_function=parseCsv, help_data=Help}
+
+return parseCsv

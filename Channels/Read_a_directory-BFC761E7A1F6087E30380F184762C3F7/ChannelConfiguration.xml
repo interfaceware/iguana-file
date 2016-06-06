@@ -9,8 +9,8 @@
    </to_channel>
    <from_mapper
       guid="Read_a_directory-From-eIdYQaU9X7FfbQ"
-      commit_id="53cc348a1da957f5ca70fa905d64d618cc4fd8c8"
-      commit_comment="Shifted link."
+      commit_id="a5f6008c5218d08e75d50c5980a0609f82c4cba0"
+      commit_comment="Import Translators: Julian"
       poll_time="10000">
    </from_mapper>
    <message_filter

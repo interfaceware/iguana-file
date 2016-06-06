@@ -1,7 +1,7 @@
 <channel
    name="Run a program under Windows"
    guid="B24465077FE3F994127921D4C3CFEBC5"
-   description="This example shows how you can invoke command line programs from Lua and capture their output. &#xD;&#xA;&#xD;&#xA;This is really useful for invoking all sorts of useful external utilities. This example is for windows which is slightly different from what is seen under other operating systems like Linux, Unix and OS X.&#xD;&#xA;"
+   description="This example shows how you can invoke command line programs from Lua and capture their output. &#xD;&#xA;&#xD;&#xA;This is really useful for invoking all sorts of useful external utilities. This example is for windows which is slightly different from what is seen under other operating systems like Linux, Unix and OS X.&#xD;&#xA;http://help.interfaceware.com/v6/run-a-program-under-windows&#xD;&#xA;"
    start_automatically="true"
    logging_level="1"
    use_message_filter="false">
@@ -9,8 +9,17 @@
    </to_channel>
    <from_mapper
       guid="Run_a_program_under_Windows-From-HhmIDT7hj3HD0b"
-      commit_id="08cdeeffe7549aaa226b4e7a3a4923c69df7d53a"
-      commit_comment="First commit."
+      commit_id="1630bb857fc58f8249efe556d7859bfbcec47068"
+      commit_comment="Slightly better comment."
       poll_time="10000">
    </from_mapper>
+   <message_filter
+      filter_after_logging="false"
+      log_pre_post_filter_message="true"
+      filter_vmd_path=""
+      transformation_mode="0"
+      scripted_transformation_configuration_name="default"
+      error_handling="0"
+      use_translator_filter="true">
+   </message_filter>
 </channel>

@@ -9,8 +9,8 @@
    </to_channel>
    <from_mapper
       guid="Load_and_Save_a_File-From-c2JGgwmm2vV071"
-      commit_id="0e63e58880caf3d3f07731205b5a8e9c6dce826b"
-      commit_comment="Put in documentation link."
+      commit_id="a5f6008c5218d08e75d50c5980a0609f82c4cba0"
+      commit_comment="Import Translators: Julian"
       poll_time="10000">
    </from_mapper>
    <message_filter

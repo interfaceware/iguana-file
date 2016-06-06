@@ -9,8 +9,8 @@
    </to_channel>
    <from_mapper
       guid="Read_Project_File_From_Lua-From-J9OEU2ii6lDjlu"
-      commit_id="88f6144f18e0f8e3cd53bc0cc8680d2b81e452a2"
-      commit_comment="Import Translators: bringing in all of Julian&apos;s channels."
+      commit_id="a5f6008c5218d08e75d50c5980a0609f82c4cba0"
+      commit_comment="Import Translators: Julian"
       poll_time="1000000">
    </from_mapper>
 </channel>

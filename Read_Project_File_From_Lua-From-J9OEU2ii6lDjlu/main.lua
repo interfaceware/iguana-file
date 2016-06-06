@@ -5,7 +5,7 @@
 
 -- http://help.interfaceware.com/v6/read-project-file-from-lua
 
-function loadFile(FileName)
+local function loadFile(FileName)
    local F = io.open(FileName, "r")
    local Content =  F:read('*a')
    F:close()

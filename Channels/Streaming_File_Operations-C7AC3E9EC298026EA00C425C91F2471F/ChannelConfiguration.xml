@@ -1,7 +1,7 @@
 <channel
    name="Streaming File Operations"
    guid="C7AC3E9EC298026EA00C425C91F2471F"
-   description="This channel shows some short examples of using file APIs in Lua which allow files to be read or written to in small chunks.&#xD;&#xA;&#xD;&#xA;This can be useful if you are processing large batches of data.&#xD;&#xA;&#xD;&#xA;Rather than reading everything into memory at once you can read smaller sections at time. This can dramatically improve the performance of some interfaces."
+   description="This channel shows some short examples of using file APIs in Lua which allow files to be read or written to in small chunks.&#xD;&#xA;&#xD;&#xA;This can be useful if you are processing large batches of data.&#xD;&#xA;&#xD;&#xA;Rather than reading everything into memory at once you can read smaller sections at time. This can dramatically improve the performance of some interfaces.&#xD;&#xA;&#xD;&#xA;http://help.interfaceware.com/v6/streaming-file-operations"
    start_automatically="true"
    logging_level="1"
    use_message_filter="false">
@@ -9,8 +9,17 @@
    </to_channel>
    <from_mapper
       guid="Streaming_File_Operations-From-azeoa69Bi2DQYF"
-      commit_id="e9c4497f74f0532064098486dd9489fd118c22ff"
-      commit_comment="First commit."
+      commit_id="84c24ea247cc34eb23a0adbebc84a03f65d702a9"
+      commit_comment="Fixed up little mistake."
       poll_time="10000">
    </from_mapper>
+   <message_filter
+      filter_after_logging="false"
+      log_pre_post_filter_message="true"
+      filter_vmd_path=""
+      transformation_mode="0"
+      scripted_transformation_configuration_name="default"
+      error_handling="0"
+      use_translator_filter="true">
+   </message_filter>
 </channel>

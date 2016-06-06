@@ -1,8 +1,9 @@
--- This is some code to show how the file APIs in Iguana can be used.  It shows
--- just the bare APIs.  In practice it's better to use helper functions.
--- See http://help.interfaceware.com/v6/load-and-save-a-file
+-- This is some code to show how the file APIs in Iguana can be used. It shows
+-- just the bare APIs. In practice it's better to use helper functions.
 
-SomeRandomData=[[
+-- http://help.interfaceware.com/v6/load-and-save-a-file
+
+local SomeRandomData=[[
 This is some random data to save to a file
 with a few lines.
 ]]

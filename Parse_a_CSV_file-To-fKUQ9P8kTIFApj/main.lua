@@ -1,12 +1,13 @@
 -- This example shows parsing of a CSV file.
--- See http://help.interfaceware.com/v6/csv-parser
 
-local csv = require 'csv'
+-- http://help.interfaceware.com/v6/csv-parser
+
+local parseCsv = require 'csv'
 
 function main(Data)
-   local Csv = csv.parseCsv(Data)       -- comma separated (default)
-   --local Csv = csv.parseCsv(Data, '\t') -- tab separated (sample message 11)
-   --local Csv = csv.parseCsv(Data, '|')  -- bar separated (sample message 12)
+   local Csv = parseCsv(Data)         -- comma separated (default)
+   --local Csv = parseCsv(Data, '\t') -- tab separated (sample message 11)
+   --local Csv = parseCsv(Data, '|')  -- bar separated (sample message 12)
    trace(Csv)
    trace('Count of rows = '..#Csv)
    
