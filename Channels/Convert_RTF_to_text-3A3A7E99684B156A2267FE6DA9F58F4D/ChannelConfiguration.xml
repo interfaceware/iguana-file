@@ -9,8 +9,8 @@
    </to_channel>
    <from_mapper
       guid="Convert_RTF_to_text-From-2Tb9hFViyhk6zt"
-      commit_id="3befed1dd2bf207933261e0bf99f12d50bd37a15"
-      commit_comment="Spacing removed."
+      commit_id="a5f6008c5218d08e75d50c5980a0609f82c4cba0"
+      commit_comment="Import Translators: Julian"
       poll_time="10000">
    </from_mapper>
 </channel>

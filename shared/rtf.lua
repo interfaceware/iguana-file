@@ -1,8 +1,7 @@
-local rtf={}
- 
 -- RTF module - used to convert RTF document into plain text.
--- See http://help.interfaceware.com/code/details/rtf-lua
- 
+
+-- http://help.interfaceware.com/v6/rtf-conversion-example
+
 -- A simple set implementation in Lua
 local function Set (list)
   local set = {}
@@ -148,12 +147,12 @@ local function feedChar (C, B)
 end
  
 -- 
--- Public API
+-- Public API - returns a single function only
 -- 
  
 -- Given an RTF document as a Lua string (Data), return the text
 -- portion of the document.
-function rtf.toTxt(Data)
+local function rtfToTxt(Data)
    Out = ''
    StateStack = { }
    State = PLAINTEXT
@@ -169,5 +168,33 @@ function rtf.toTxt(Data)
    end
    return Out
 end
- 
-return rtf
+
+local Help = {
+   Title="rtfToTxt",
+   Usage="rtfToTxt(data)",
+   ParameterTable=false,
+   Parameters={
+      {data={Desc="String in RTF format <u>string</u>."}},
+   },
+   Returns={
+      {Desc="Converted plain text data <u>string</u>."}
+   },
+   Examples={[[-- Convert RTF "Content" into plain text
+local Text = rtfToText(Content)
+]]},
+   Desc="Converts a string of RTF formatted text in plain text.",
+   SeeAlso={
+      {
+         Title="Convert RTF to text",
+         Link="http://help.interfaceware.com/v6/rtf-conversion-example"
+      },
+      {
+         Title="Source code for the rtf.lua module on github",
+         Link="https://github.com/interfaceware/iguana-file/blob/master/shared/rtf.lua"
+      }
+   },
+}
+
+help.set{input_function=rtfToTxt, help_data=Help}
+
+return rtfToTxt
