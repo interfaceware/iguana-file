@@ -4,9 +4,9 @@
 
 -- The code uses AES encryption https://en.wikipedia.org/wiki/Advanced_Encryption_Standard
 
--- See http://help.interfaceware.com/v6/encrypt-password-in-file
+-- http://help.interfaceware.com/v6/encrypt-password-in-file
 
-config = require 'encrypt.password'
+local config = require 'encrypt.password'
 
 -- In production it makes sense to call the module outside of the main function to avoid
 -- the overhead of loading a file everytime a message is processed.
@@ -24,7 +24,7 @@ function main(Data)
    -- Use this code to save the encrypted password to the configuration file.
    -- 1) Execute this code *once* inside the editor to encrypt the password
    --    Run it again (*once* inside the editor) whenever the password changes
-   -- 2) Comment out the line of code then replace the real password with a fake
+   -- 2) Comment out the line of code then replace the real password with a fake one
    --    If don't comment the line first then the fake password will be encrypted
    -- 3) Check the config.load{} is returning the correct password
    -- NOTE: Never save a commit that includes a real password

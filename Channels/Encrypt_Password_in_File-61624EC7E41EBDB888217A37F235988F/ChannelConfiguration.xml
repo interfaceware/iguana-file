@@ -7,8 +7,8 @@
    use_message_filter="false">
    <to_mapper
       guid="Encrypt_Password_in_File-To-fhpR5hvUCEnhuz"
-      commit_id="e4595fb974af4690bf1a8ef43dd995e509ca0b3d"
-      commit_comment="Import Translators: encrypt password">
+      commit_id="ae12a802767d4af0e298415136c345b3d64c9c34"
+      commit_comment="Small tweak to comment.">
    </to_mapper>
    <from_channel/>
 </channel>
