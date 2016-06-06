@@ -1,0 +1,13 @@
+{
+    "LocalDependencies": [],
+    "LuaDependencies": [
+        "cron.edit"
+    ],
+    "OtherDependencies": [],
+    "timestamp": "1465233666",
+    "version_info": {
+        "build": 0,
+        "major": 6,
+        "minor": 0
+    }
+}
