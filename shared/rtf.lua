@@ -157,7 +157,9 @@ local function rtfToTxt(Data)
    StateStack = { }
    State = PLAINTEXT
    setDest (USE)
- 
+	
+   Data = string.gsub (Data, '\\par\n', '\\par ')
+   Data = string.gsub (Data, '\\par\r', '\\par ')
    Data = string.gsub (Data, '\r', '')
    Data = string.gsub (Data, '\n', '')
  

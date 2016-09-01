@@ -9,10 +9,11 @@ function main()
    local FileName = iguana.project.root()..'/'..iguana.project.guid()..'/sample.rtf'
    local F = io.open(FileName,'r')
    local Content = F:read('*a')
+   trace(Content)
+   
    F:close()
    
    -- Now convert the content into plain text.
    local Text = rtfToText(Content)
-   trace(Text)
    -- Of course formatting is lost...
 end

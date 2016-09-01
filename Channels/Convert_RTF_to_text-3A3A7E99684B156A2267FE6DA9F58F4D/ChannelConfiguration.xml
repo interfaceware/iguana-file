@@ -9,8 +9,8 @@
    </to_channel>
    <from_mapper
       guid="Convert_RTF_to_text-From-2Tb9hFViyhk6zt"
-      commit_id="a5f6008c5218d08e75d50c5980a0609f82c4cba0"
-      commit_comment="Import Translators: Julian"
+      commit_id="730a11d32fb10089d0ed5255080c688368eecff1"
+      commit_comment="Import Translators: Import RTF"
       poll_time="10000">
    </from_mapper>
 </channel>
