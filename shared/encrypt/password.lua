@@ -37,7 +37,7 @@ function config.load(T)
    end
    local X = xml.parse{data=Data}
    local Salt = X.config.salt:S()
-   local TotalKey = (Salt..Key..Key..Key):sub(1,32)
+   local TotalKey = filter.base64.enc(crypto.digest{data=Key .. Salt,algorithm='SHA512'}):sub(1,32)
    local Password = X.config.password:S()
    Password = filter.base64.dec(Password)
    Password = filter.aes.dec{data=Password, key=TotalKey}
@@ -61,18 +61,19 @@ local XmlSaveFragment=[[
 ]]
 
 function config.save(T)
-   local Config = T.config
+   local Config   = T.config
    local Password = T.password
-   local Key = T.key
+   local Key      = T.key
+   local Salt     = util.guid(128)
+   local TotalKey = filter.base64.enc(crypto.digest{data=Key .. Salt,algorithm='SHA512'}):sub(1,32)
+   local X        = xml.parse{data=XmlSaveFragment}
    
-   local X = xml.parse{data=XmlSaveFragment}
-   local Salt = util.guid(128)
-   X.config.salt = Salt
-   local TotalKey = (Salt..Key..Key..Key):sub(1,32)
-   Password = Password
    local EncryptedPassword = filter.aes.enc{data=Password, key=TotalKey}
    EncryptedPassword = filter.base64.enc(EncryptedPassword)
+   
+   X.config.salt = Salt
    X.config.password = EncryptedPassword
+   
    local Content = Comment..X:S()
    SaveFile(Config, Content)
 end
